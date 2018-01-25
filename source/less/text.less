@@ -1,0 +1,43 @@
+@set-font-family-main: "Arial", sans-serif;
+
+@set-font-family-additional: "Oswald", "Arial", sans-serif;
+
+.fontface(@family, @filename: @family, @weight: normal, @style: normal) {
+  @font-face {
+    font-family: @family;
+    src: url("../fonts/@{filename}.woff2") format("woff2"),
+    url("../fonts/@{filename}.woff") format("woff");
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+/*Примесь с шаблонами для размера шрифта*/
+
+.set-font-size(@font-size) {
+  font-size: @font-size;
+}
+
+.set-font-size(smaller; @font-size) {
+  font-size: (@font-size)-2;
+}
+
+.set-font-size(bigger; @font-size) {
+  font-size: (@font-size)+2;
+}
+
+.set-font-size(subtitle; @font-size) {
+  font-size: (@font-size)+10;
+}
+
+.set-font-size(title; @font-size) {
+  font-size: (@font-size)+22;
+}
+
+//
+
+.text--title {
+  .fontface (Oswald Regular);
+  .set-font-size (title;14px);
+}
+
