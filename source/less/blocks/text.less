@@ -1,0 +1,37 @@
+.fontface(@family, @filename: @family, @weight: normal, @style: normal) {
+  @font-face {
+    font-family: @family;
+    src: url("../fonts/@{filename}.woff2") format("woff2"),
+    url("../fonts/@{filename}.woff") format("woff");
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+.fontface (Oswald Regular);
+.fontface (Oswald Medium);
+
+.text {
+  font-family: @set-font-family-additional;
+  .set-font-size (14px);
+  font-weight: normal;
+  color: @set-color-black;
+  text-transform: uppercase;
+    &--title {
+      .set-font-size (title;14px);
+      line-height: 60px;
+    }
+    &--subtitle {
+      .set-font-size (subtitle,14px);
+      line-height: 24px;
+    }
+    &--bigger {
+      .set-font-size (bigger,14px);
+    }
+    &--menu {
+      font-family: @set-font-family-menu;
+      .set-font-size (20px);
+    }
+}
+
+
