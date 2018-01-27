@@ -1,0 +1,51 @@
+/*Примесь с шаблонами для размера шрифта*/
+
+.set-font-size(@font-size) {
+  font-size: @font-size;
+}
+
+.set-font-size(smaller; @font-size) {
+  font-size: (@font-size)-2;
+}
+
+.set-font-size(bigger; @font-size) {
+  font-size: (@font-size)+2;
+}
+
+.set-font-size(subtitle; @font-size) {
+  font-size: (@font-size)+10;
+}
+
+.set-font-size(title; @font-size) {
+  font-size: (@font-size)+22;
+}
+
+//
+
+.centerer() {
+  margin: 0 auto;
+}
+
+.set-padding (@padding-top, @padding-right, @padding-bottom, @padding-left) {
+  padding-top: @padding-top;
+  padding-right: @padding-right;
+  padding-bottom: @padding-bottom;
+  padding-left: @padding-left;
+}
+
+.set-margin (@margin-top, @margin-right, @margin-bottom, @margin-left) {
+  margin-top: @margin-top;
+  margin-right: @margin-right;
+  margin-bottom: @margin-bottom;
+  margin-left: @margin-left;
+}
+
+.outline(@outline-color) {
+  outline: 1px solid @outline-color;
+}
+
+.list-reset() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
