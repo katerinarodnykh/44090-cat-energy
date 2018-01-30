@@ -1,5 +1,13 @@
 .button {
+  width: 100%;
   color: @set-color-white;
   line-height: 20px;
   background-color: @set-bg-green;
+  text-align: center;
+}
+
+@media (min-width: @table-width) {
+  .button {
+    width: auto;
+  }
 }
