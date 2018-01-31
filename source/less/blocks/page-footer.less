@@ -12,7 +12,7 @@
   border-bottom: 1px solid #d9d9d9;
 }
 
-@media (min-width: @table-width) {
+@media (min-width: @tablet-width) {
   .page-footer__bottom {
     display: flex;
     justify-content: space-between;
@@ -25,5 +25,22 @@
     width: auto;
     height: 100%;
     border-bottom: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    position: relative;
+  }
+
+  .page-footer__contacts {
+    position: absolute;
+    width: 570px;
+    left: 110px;
+    top: 95px;
+  }
+
+  .page-footer__bottom {
+    .set-padding(0px, 110px, px, 110px);
   }
 }

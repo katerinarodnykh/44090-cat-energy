@@ -33,7 +33,7 @@
 }
 
 
-@media (min-width: @table-width) {
+@media (min-width: @tablet-width) {
   .promo {
     align-items: flex-start;
     min-height: 840px;
@@ -67,5 +67,23 @@
     .set-margin(0, 0, 0, 90px);
     .set-padding(17px, 27px, 17px, 27px);
     line-height: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo{
+    min-height: 655px;
+  }
+
+  .promo__title {
+    .set-margin(102px, 0, 42px, 160px);
+  }
+
+  .promo__slogan {
+    .set-margin(0, 0, 51px, 160px);
+  }
+
+  .promo__button {
+    .set-margin(0, 0, 0, 160px);
   }
 }

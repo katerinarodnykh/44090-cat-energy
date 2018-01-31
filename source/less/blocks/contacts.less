@@ -3,7 +3,7 @@
   justify-content: space-between;
   min-height: 114px;
   .set-padding(30px, 20px, 15px, 20px);
-  /*.outline(yellow);*/
+  .outline(yellow);
 }
 
 .page-footer--catalog .contacts,
@@ -27,7 +27,7 @@
   margin: 0;
 }
 
-@media (min-width: @table-width) {
+@media (min-width: @tablet-width) {
   .contacts {
     .set-padding(65px, 70px, 58px, 70px);
   }
@@ -44,5 +44,17 @@
 
   .contacts__city {
     .set-margin(18px, 0 , 0, 0);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    .set-padding(65px, 75px, 58px, 75px);
+    background-color: @set-color-white;
+  }
+
+  .contacts__adress {
+    width: 170px;
+    text-align: left;
   }
 }
