@@ -8,12 +8,14 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="#" width="10" height="10" alt="Логотип Cat Energy">
-      </a>
-      <img class="company-name page-header__company-name" src="#" width="10" height="10" alt="Cat Energy">
+      <div class="page-header__top">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="#" width="10" height="10" alt="Логотип Cat Energy">
+        </a>
+        <img class="company-name page-header__company-name" src="#" width="10" height="10" alt="Cat Energy">
+        <button class="page-header__toggle" type="button">Открыть меню</button>
+      </div>
       <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">Открыть меню</button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
@@ -162,7 +164,7 @@
           <li class="catalog-main__item">
             <img class="catalog-main__image" src="#" width="10" height="10" alt="Фото продукта">
             <div class="catalog-main__description">
-              <h3 class="catalog-main__item-title text text--bigger">Cat Energy PRO 500 г</h3>
+              <h3 class="catalog-main__item-title text text--bigger">Cat Energy SLIM 500 г</h3>
               <table class="catalog-main__info">
                 <tr class="catalog-main__info-row">
                   <td class="catalog-main__info-cell">Объём</td>
@@ -181,9 +183,11 @@
             <a class="catalog-main__button button text text--bigger" href="#">Заказать</a>
           </li>
           <li class="catalog-main__item catalog-main__item--show-more show-more">
-            <h3 class="show-more__title text text--bigger">Показать еще 100500 товаров</h3>
-            <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-            <button class="show-more__button button text text--bigger" type="button">Показать все</button>
+            <div class="show-more__wrapper">
+              <h3 class="show-more__title text text--bigger">Показать еще 100500 товаров</h3>
+              <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
+              <button class="show-more__button button text text--bigger" type="button">Показать все</button>
+            </div>
           </li>
         </ul>
       </section>
@@ -194,7 +198,7 @@
             <h3 class="catalog-additional__item-title text text--bigger">Сахарозаменитель</h3>
             <table class="catalog-additional__info">
               <tr class="catalog-additional__row">
-                <td class="catalog-additional__cell">1 Упаковка</td>
+                <td class="catalog-additional__cell">1 Упаковка (100 г)</td>
                 <td class="catalog-additional__cell">100 Р.</td>
               </tr>
             </table>
