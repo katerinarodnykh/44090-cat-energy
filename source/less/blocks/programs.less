@@ -7,9 +7,9 @@
   .set-padding(20px, 20px, 18px, 20px);
   background-color: @set-bg-grey;
 
-    &--slim {
-      .set-margin(0, 0, 20px, 0);
-    }
+  &--slim {
+    .set-margin(0, 0, 20px, 0);
+  }
 }
 
 .programs__list {
@@ -23,7 +23,7 @@
   line-height: 38px;
 }
 
-.programs__title:before {
+.programs__title::before {
   content: "";
   position: absolute;
   top: -5px;
@@ -62,7 +62,7 @@
     .set-margin(25px, 0, 25px, 0);
   }
 
-  .programs__title:before {
+  .programs__title::before {
     top: 18px;
     left: 392px;
     width: 200px;
@@ -99,9 +99,9 @@
     .set-margin(0, 0, 28px, 0);
   }
 
-  .programs__title:before {
+  .programs__title::before {
     top: -2px;
-    left: 0px;
+    left: 1px;
     width: 100px;
     height: 100px;
   }
