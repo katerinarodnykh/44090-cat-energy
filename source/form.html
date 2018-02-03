@@ -35,30 +35,32 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="get">
         <h2 class="form__title text text--title">Подбор программы</h2>
         <p class="form__description text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <fieldset class="form__group form__group--main">
-          <legend class="visually-hidden">Основная информация</legend>
-          <label class="form__label text text--bigger">Имя:<sup>*</sup>
-            <input class="form__input form__input--name text text--bigger" type="text" name="name" placeholder="Барсик" required>
-          </label>
-          <label class="form__label text text--bigger">Вес(кг):<sup>*</sup>
-            <input class="form__input form__input--weight text text--bigger" type="number" name="weight" placeholder="7" required>
-          </label>
-          <label class="form__label text text--bigger">Возраст(лет):
-            <input class="form__input form__input--age text text--bigger" type="number" name="age" placeholder="7">
-          </label>
-        </fieldset>
-        <fieldset class="form__group form__group--program">
-          <legend class="visually-hidden">Выбор программы</legend>
-          <label class="form__label text text--bigger">
-            <input class="form__program" type="radio" name="program" value="program-slim" checked>Похудение
-          </label>
-          <label class="form__label text text--bigger">
-            <input class="form__program" type="radio" name="program" value="program-pro">Набор массы
-          </label>
-          <label class="form__label text text--bigger">
-            <input class="form__program" type="radio" name="program" value="program-no">Не знаю (Нужен ваш совет)
-          </label>
-        </fieldset>
+        <div class="form__wrapper">
+          <fieldset class="form__group form__group--main">
+            <legend class="visually-hidden">Основная информация</legend>
+            <label class="form__label text text--bigger">Имя:<sup>*</sup>
+              <input class="form__input form__input--name text text--bigger" type="text" name="name" placeholder="Барсик" required>
+            </label>
+            <label class="form__label text text--bigger">Вес(кг):<sup>*</sup>
+              <input class="form__input form__input--weight text text--bigger" type="number" name="weight" placeholder="7" required>
+            </label>
+            <label class="form__label text text--bigger">Возраст(лет):
+              <input class="form__input form__input--age text text--bigger" type="number" name="age" placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset class="form__group form__group--program">
+            <legend class="visually-hidden">Выбор программы</legend>
+            <label class="form__label text text--bigger">
+              <input class="form__program" type="radio" name="program" value="program-slim" checked>Похудение
+            </label>
+            <label class="form__label text text--bigger">
+              <input class="form__program" type="radio" name="program" value="program-pro">Набор массы
+            </label>
+            <label class="form__label text text--bigger">
+              <input class="form__program" type="radio" name="program" value="program-no">Не знаю (Нужен ваш совет)
+            </label>
+          </fieldset>
+        </div>
         <fieldset class="form__group form__group--contacts">
           <legend class="form__subtitle text text--subtitle">Контактные данные (владельца кота)</legend>
           <label class="form__label text text--bigger">E-mail:<sup>*</sup>
@@ -87,8 +89,10 @@
             <input class="form__checkbox" type="checkbox" name="vitamins">Витамины
           </label>
         </fieldset>
-        <button class="form__button button text text--bigger" type="submit" value="Отправить заявку">Отправить заявку</button>
-        <div class="form__required"><sup>*</sup> — Oбязательные поля</div>
+        <div class="form__bottom">
+          <button class="form__button button text text--bigger" type="submit" value="Отправить заявку">Отправить заявку</button>
+          <div class="form__required"><sup>*</sup> — Oбязательные поля</div>
+        </div>
       </form>
     </main>
     <footer class="page-footer page-footer--form">
