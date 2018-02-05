@@ -18,6 +18,7 @@
   height: 14px;
   border-radius: 7px;
   border: 1px solid #d9d9d9;
+  cursor: pointer;
 }
 
 .before-after__switch-on {
@@ -25,4 +26,58 @@
   height: 6px;
   border-radius: 5px;
   background-color: @set-bg-green;
+}
+
+@media (min-width: @tablet-width) {
+  .before-after__text {
+    .set-padding(5px, 0, 5px, 0);
+    border-bottom: 1px dotted #bebebe;
+    cursor: pointer;
+  }
+
+  .before-after__text:hover {
+    border-bottom: 1px solid #bebebe;
+  }
+
+  .before-after__text:active {
+    border-bottom: none;
+  }
+
+  .before-after__switch {
+    position: relative;
+    width: 428px;
+    height: 7px;
+    border: none;
+    background-color: #dcdcdc;
+  }
+
+  .before-after__switch-wrapper {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -17px;
+    background-color: @set-color-white;
+    border: 1px solid  #dcdcdc;
+    box-shadow: 1px 1px 2px 1px #dcdcdc;
+  }
+
+  .before-after__switch-wrapper:hover {
+    box-shadow: 1px 2px 2px 1px #dcdcdc;
+  }
+
+  .before-after__switch-wrapper:active {
+    border: 1px solid  @set-bg-green;
+  }
+
+  .before-after__switch-on {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    left: 50%;
+    margin-left: -4px;
+  }
 }
