@@ -1,6 +1,5 @@
 .catalog-additional {
   .set-padding(25px, 20px, 25px, 20px);
-  .outline(violet);
 }
 
 .catalog-additional__title {
@@ -45,7 +44,7 @@
   line-height: 14px;
 }
 
-.catalog-additional__cell:nth-child(2) {
+.catalog-additional__info-cell--second {
   text-align: right;
 }
 
@@ -99,11 +98,11 @@
     line-height: 22px;
   }
 
-  .catalog-additional__cell:first-child {
+  .catalog-additional__info-cell--first {
     text-align: right;
   }
 
-  .catalog-additional__cell:nth-child(2) {
+  .catalog-additional__info-cell--second {
     width: 94px;
   }
 
@@ -174,19 +173,15 @@
 
   .catalog-additional__cell {
     line-height: 19px;
+    text-align: left;
   }
 
-  .catalog-additional__cell:first-child {
+  .catalog-additional__info-cell--first {
     width: 243px;
   }
 
-  .catalog-additional__cell:nth-child(2) {
+  .catalog-additional__info-cell--second {
     width: auto;
-  }
-
-  .catalog-additional__cell:first-child,
-  .catalog-additional__cell:nth-child(2) {
-    text-align: left;
   }
 
   .catalog-additional__button {

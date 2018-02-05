@@ -36,7 +36,7 @@
         <h2 class="form__title text text--title">Подбор программы</h2>
         <p class="form__description text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <div class="form__wrapper">
-          <fieldset class="form__group form__group--main">
+          <div class="form__group form__group--main">
             <legend class="visually-hidden">Основная информация</legend>
             <label class="form__label text text--bigger">Имя:<sup>*</sup>
               <input class="form__input form__input--name text text--bigger" type="text" name="name" placeholder="Барсик" required>
@@ -47,8 +47,8 @@
             <label class="form__label text text--bigger">Возраст(лет):
               <input class="form__input form__input--age text text--bigger" type="number" name="age" placeholder="7">
             </label>
-          </fieldset>
-          <fieldset class="form__group form__group--program">
+          </div>
+          <div class="form__group form__group--program">
             <legend class="visually-hidden">Выбор программы</legend>
             <label class="form__label text text--bigger">
               <input class="form__program" type="radio" name="program" value="program-slim" checked>Похудение
@@ -59,9 +59,9 @@
             <label class="form__label text text--bigger">
               <input class="form__program" type="radio" name="program" value="program-no">Не знаю (Нужен ваш совет)
             </label>
-          </fieldset>
+          </div>
         </div>
-        <fieldset class="form__group form__group--contacts">
+        <div class="form__group form__group--contacts">
           <legend class="form__subtitle text text--subtitle">Контактные данные (владельца кота)</legend>
           <label class="form__label text text--bigger">E-mail:<sup>*</sup>
             <input class="form__input form__input--email text text--bigger" type="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -69,12 +69,12 @@
           <label class="form__label text text--bigger">Телефон:<sup>*</sup>
             <input class="form__input form__input--phone text text--bigger" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
           </label>
-        </fieldset>
-        <fieldset class="form__group form__group--comments">
+        </div>
+        <div class="form__group form__group--comments">
           <legend class="form__subtitle text text--subtitle">Комментарий</legend>
           <textarea class="form__textarea text text--bigger">Расскажите обо всех повадках кота</textarea>
-        </fieldset>
-        <fieldset class="form__group form__group--additional">
+        </div>
+        <div class="form__group form__group--additional">
           <legend class="form__subtitle text text--subtitle">Дополнительно</legend>
           <label class="form__label text text--bigger">
             <input class="form__checkbox" type="checkbox" name="sweetener" checked>Сахарозаменитель
@@ -88,7 +88,7 @@
           <label class="form__label text text--bigger">
             <input class="form__checkbox" type="checkbox" name="vitamins">Витамины
           </label>
-        </fieldset>
+        </div>
         <div class="form__bottom">
           <button class="form__button button text text--bigger" type="submit" value="Отправить заявку">Отправить заявку</button>
           <div class="form__required"><sup>*</sup> — Oбязательные поля</div>
