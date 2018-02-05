@@ -1,12 +1,383 @@
-.form {
-  .set-padding(25px, 20px, 25px, 20px);
-  .outline(black);
+.form__title {
+  .set-padding(15px, 20px, 0, 20px);
+  .set-margin(0, 0, 25px, 0);
+}
+
+.form__description {
+  .set-padding(0, 40px, 10px, 20px);
 }
 
 .form__group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  .set-padding(15px, 20px, 10px, 20px);
   line-height: 18px;
+  border: 0;
+}
+
+.form__group--main,
+.form__group--program {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  .set-margin(0, 0, 14px, 0);
+}
+
+.form__input {
+  flex-grow: 1;
+  height: 45px;
+  .set-padding(0, 15px, 0, 15px);
+}
+
+.form__input--weight::-webkit-inner-spin-button,
+.form__input--weight::-webkit-outer-spin-button,
+.form__input--age::-webkit-inner-spin-button,
+.form__input--age::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form__group--main .form__input {
+  .set-margin(0, 0, 0, 15px);
+}
+
+.form__group--program {
+  .set-padding(25px, 20px, 1px, 20px);
+}
+
+.form__group--program .form__label {
+  .set-margin(0, 0, 25px, 0);
+}
+
+.form__group--program .form__program {
+  .set-margin(0, 32px, 0, 0);
+}
+
+.form__subtitle {
+  position: relative;
+  width: 100%;
+  .set-padding(12px, 0, 34px, 0);
+  flex-shrink: 0;
+}
+
+.form__group--contacts .form__subtitle::after {
+  content: "";
+  position: absolute;
+  width: 99px;
+  height: 3px;
+  background-color: @set-bg-green;
+  right: -20px;
+  top: 26px;
+}
+
+.form__group--contacts .form__input {
+  .set-margin(0, 0, 0, 12px);
+}
+
+.form__group--comments {
+  .set-padding(0px, 20px, 10px, 20px);
+}
+
+.form__group--comments .form__subtitle {
+  .set-padding(5px, 0, 35px, 0);
+}
+
+.form__group--comments .form__subtitle::after {
+  content: "";
+  position: absolute;
+  width: 158px;
+  height: 3px;
+  background-color: @set-bg-green;
+  right: -20px;
+  top: 18px;
+}
+
+.form__textarea {
+  width: 100%;
+  min-height: 150px;
+  .set-padding(12px, 12px, 12px, 13px);
+  resize: none;
+}
+
+.form__group--additional {
+  .set-padding(0, 20px, 15px, 20px);
+}
+
+.form__group--additional .form__subtitle {
+  .set-padding(18px, 0, 40px, 0);
+}
+
+.form__group--additional .form__subtitle::after {
+  content: "";
+  position: absolute;
+  width: 136px;
+  height: 3px;
+  background-color: @set-bg-green;
+  right: -20px;
+  top: 31px;
+}
+
+.form__group--additional .form__label {
+  .set-margin(0, 0, 25px, 0);
+}
+
+.form__group--additional .form__checkbox {
+  .set-margin(0, 32px, 0, 0);
+}
+
+.form__button {
+  border: 0;
+  width: 280px;
+  .centerer();
 }
 
 .form__required {
+  .set-margin(20px, 0, 32px, 0);
   line-height: 16px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .form__title {
+    .set-padding(30px, 30px, 0, 30px);
+    .set-margin(0, 0, 55px, 0);
+  }
+
+  .form__description {
+    width: 470px;
+    .set-padding(0, 70px, 10px, 70px);
+    .set-margin(0, 0, 42px, 0);
+    line-height: 30px;
+  }
+
+  .form__group {
+    .set-padding(15px, 66px, 10px, 71px);
+  }
+
+  .form__input {
+    height: 52px;
+  }
+
+  .form__label {
+    .set-margin(0, 0, 19px, 0);
+  }
+
+  .form__group--main .form__input {
+    .set-margin(0, 0, 0, 20px);
+  }
+
+  .form__group--main {
+    border-bottom: 0;
+    .set-margin(0, 0, 45px, 0);
+  }
+
+  .form__group--program {
+    .set-padding(34px, 66px, 0, 0);
+    .set-margin(0, 0, 47px, 71px);
+    border: 1px solid #e6e6e6;
+  }
+
+  .form__group--program .form__label {
+    .set-margin(0, 0, 35px, 0);
+  }
+
+  .form__group--program .form__program {
+    .set-margin(0, 72px, 0, 0);
+  }
+
+  .form__subtitle {
+    .set-margin(0, 0, 42px, 0);
+  }
+
+  .form__group--contacts {
+    .set-margin(0, 0, 13px, 0);
+  }
+
+  .form__group--contacts .form__label {
+    .set-margin(0, 0, 20px, 0);
+  }
+
+  .form__group--contacts .form__subtitle::after {
+    width: 145px;
+    right: -66px;
+    top: 36px;
+  }
+
+  .form__subtitle::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: @set-bg-green;
+    left: -71px;
+    top: 36px;
+  }
+
+  .form__group--contacts .form__input {
+    .set-margin(0, 0, 0, 18px);
+  }
+
+  .form__group--comments {
+    .set-margin(0, 0, 22px, 0);
+  }
+
+  .form__group--comments .form__subtitle {
+    .set-margin(0, 0, 41px, 0);
+  }
+
+  .form__group--comments .form__subtitle::after {
+    width: 479px;
+    right: -66px;
+    top: 28px;
+  }
+
+  .form__group--comments .form__subtitle::before {
+    top: 28px;
+  }
+
+  .form__textarea {
+    min-height: 172px;
+    .set-padding(12px, 12px, 12px, 17px);
+  }
+
+  .form__group--additional {
+    flex-direction: row;
+    flex-wrap: wrap;
+    .set-padding(15px, 66px, 12px, 71px);
+  }
+
+  .form__group--additional .form__label {
+    width: 50%;
+    .set-padding(0, 0, 28px, 13px);
+  }
+
+  .form__group--additional .form__subtitle {
+    .set-margin(0, 0, 27px, 0);
+  }
+
+  .form__group--additional .form__subtitle::after {
+    width: 447px;
+    right: -66px;
+    top: 41px;
+  }
+
+  .form__group--additional .form__subtitle::before {
+    top: 41px;
+  }
+
+  .form__bottom {
+    display: flex;
+    align-items: center;
+    .set-margin(0, 66px, 72px, 71px);
+  }
+
+  .form__button {
+    width: 282px;
+    .set-margin(0, 63px, 0, 0);
+    .set-padding(16px, 16px, 16px, 16px);
+  }
+
+  .form__required {
+    .set-margin(0, 0, 0, 0);
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__title {
+    .set-padding(68px, 110px, 0, 110px);
+    .set-margin(0, 0, 55px, 0);
+  }
+
+  .form__description {
+    width: 550px;
+    .set-padding(0, 110px, 10px, 110px);
+    .set-margin(0, 0, 56px, 0);
+  }
+
+  .form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .set-padding(0, 110px, 23px, 110px);
+  }
+
+  .form__group {
+    .set-padding(15px, 110px, 10px, 110px);
+  }
+
+  .form__group--main {
+    width: 568px;
+    .set-padding(0, 0, 0, 0);
+    .set-margin(0, 0, 0, 0);
+  }
+
+  .form__group--program {
+    width: 570px;
+    .set-margin(0, 0, 0, 0);
+    .set-padding(34px, 66px, 0, 0);
+  }
+
+  .form__group--contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .set-margin(0, 0, 15px, 0);
+  }
+
+  .form__group--contacts .form__label {
+    width: 47%;
+  }
+
+  .form__group--contacts .form__subtitle::after {
+    width: 777px;
+    right: -110px;
+  }
+
+  .form__subtitle::before {
+    width: 70px;
+    left: -110px;
+  }
+
+  .form__group--comments {
+    .set-margin(0, 0, 23px, 0);
+  }
+
+  .form__group--comments .form__subtitle::after {
+    width: 1111px;
+    right: -110px;
+  }
+
+  .form__textarea {
+    min-height: 173px;
+    .set-padding(13px, 12px, 13px, 17px);
+  }
+
+  .form__group--additional {
+    .set-margin(0, 0, 10px, 0);
+  }
+
+  .form__group--additional .form__subtitle::after {
+    width: 1080px;
+    right: -110px;
+  }
+
+  .form__group--additional .form__label {
+    width: 25%;
+    .set-padding(0, 0, 28px, 13px);
+  }
+
+  .form__bottom {
+    .set-margin(0, 110px, 82px, 110px);
+  }
+
+  .form__button {
+    .set-margin(0, 85px, 0, 0);
+    width: 568px;
+  }
 }

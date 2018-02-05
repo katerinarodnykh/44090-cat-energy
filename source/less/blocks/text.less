@@ -21,19 +21,35 @@
   &--title {
     .set-font-size (title,14px);
     line-height: 60px;
+    text-transform: none;
   }
 
   &--subtitle {
     .set-font-size (subtitle,14px);
     line-height: 24px;
+    text-transform: none;
   }
 
   &--bigger {
     .set-font-size (bigger,14px);
   }
+}
 
-  &--menu {
-    font-family: @set-font-family-menu;
+@media (min-width: @tablet-width) {
+  .text {
     .set-font-size (20px);
+
+    &--title {
+      .set-font-size (60px);
+    }
+
+    &--subtitle {
+      .set-font-size (36px);
+      line-height: 38px;
+    }
+
+    &--bigger {
+      .set-font-size (20px);
+    }
   }
 }

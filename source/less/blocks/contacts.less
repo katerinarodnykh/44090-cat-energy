@@ -1,6 +1,8 @@
 .contacts {
-  .set-padding(22px, 20px, 22px, 20px);
-  .outline(yellow);
+  display: flex;
+  justify-content: space-between;
+  min-height: 114px;
+  .set-padding(30px, 20px, 15px, 20px);
 }
 
 .page-footer--catalog .contacts,
@@ -9,9 +11,49 @@
 }
 
 .contacts__text {
+  width: 115px;
+  margin: 0;
   line-height: 20px;
 }
 
 .contacts__adress {
+  width: 140px;
   line-height: 20px;
+}
+
+.contacts__street,
+.contacts__city {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    .set-padding(65px, 70px, 58px, 70px);
+  }
+
+  .contacts__text {
+    width: 175px;
+    line-height: 25px;
+  }
+
+  .contacts__adress {
+    width: 160px;
+    text-align: right;
+  }
+
+  .contacts__city {
+    .set-margin(18px, 0 , 0, 0);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer .contacts {
+    .set-padding(65px, 75px, 58px, 75px);
+    background-color: #ffffff;
+  }
+
+  .contacts__adress {
+    width: 170px;
+    text-align: left;
+  }
 }

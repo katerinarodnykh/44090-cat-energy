@@ -1,5 +1,45 @@
 .page-footer__bottom {
+  min-height: 236px;
   .set-padding(22px, 20px, 22px, 20px);
   background-color: @set-bg-grey;
-  .outline(red);
+}
+
+.page-footer__company-name {
+  display: block;
+  width: 100%;
+  height: 72px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .set-padding(0px, 30px, px, 30px);
+    min-height: 150px;
+  }
+
+  .page-footer__company-name {
+    width: auto;
+    height: 100%;
+    border-bottom: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    position: relative;
+  }
+
+  .page-footer__contacts {
+    position: absolute;
+    width: 570px;
+    left: 110px;
+    top: 95px;
+  }
+
+  .page-footer__bottom {
+    .set-padding(0px, 110px, px, 110px);
+  }
 }

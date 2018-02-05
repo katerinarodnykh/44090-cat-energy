@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background-color: #282828;
 }
 
 *,
@@ -44,4 +45,18 @@ body {
   color: @set-color-main;
   font-style: normal;
   background-color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    width: @tablet-width;
+    .set-font-size (16px);
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    width: @desktop-width;
+  }
 }

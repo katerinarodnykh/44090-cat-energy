@@ -1,4 +1,34 @@
-.page-header {
-  height: 264px; /*Временно, потом удалить*/
-  .outline(violet);
+.page-header__top {
+  min-height: 66px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 110px;
+    .set-padding(10px, 30px, 10px, 30px);
+  }
+
+  .page-header__top {
+    border-bottom: none;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    align-items: flex-end;
+    min-height: 120px;
+    .set-padding(10px, 110px, 10px, 110px);
+
+    &--index {
+      background: linear-gradient(to left, @set-bg-green 50%, transparent 40%);
+    }
+  }
 }

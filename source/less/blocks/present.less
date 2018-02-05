@@ -1,16 +1,55 @@
 .present {
-  .set-padding(35px, 20px, 35px, 20px);
-  .outline(green);
+  .set-padding(40px, 0, 9px, 0);
 }
 
 .present-wrapper {
+  display: flex;
   height: 289px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
 
 .present__text {
+  width: 170px;
+  .set-margin(auto, auto, 43px, auto);
   .set-font-size(16px);
   color: @set-color-white;
   line-height: 20px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    .set-padding(69px, 0, 50px, 0);
+  }
+
+  .present-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 200px;
+    background: @set-bg-green;
+  }
+
+  .present__text {
+    text-align: left;
+    .set-margin(0, 115px, 0, 0);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    .set-padding(0, 0, 0, 0);
+  }
+
+  .present-wrapper {
+    width: 244px;
+    height: 289px;
+  }
+
+  .present__text {
+    .set-margin(auto, auto, 43px, auto);
+    text-align: center;
+  }
 }
