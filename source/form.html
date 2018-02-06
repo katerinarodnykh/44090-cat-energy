@@ -9,7 +9,7 @@
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <a class="page-header__logo" href="#">
+        <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="#" width="10" height="10" alt="Логотип Cat Energy">
         </a>
         <img class="company-name page-header__company-name" src="#" width="10" height="10" alt="Cat Energy">
@@ -51,13 +51,19 @@
           <div class="form__group form__group--program">
             <legend class="visually-hidden">Выбор программы</legend>
             <label class="form__label text text--bigger">
-              <input class="form__program" type="radio" name="program" value="program-slim" checked>Похудение
+              <input class="visually-hidden form__radio" type="radio" name="program" value="program-slim" checked>
+              <span class="form__radio-indicator"></span>
+              Похудение
             </label>
             <label class="form__label text text--bigger">
-              <input class="form__program" type="radio" name="program" value="program-pro">Набор массы
+              <input class="visually-hidden form__radio" type="radio" name="program" value="program-pro">
+              <span class="form__radio-indicator"></span>
+              Набор массы
             </label>
             <label class="form__label text text--bigger">
-              <input class="form__program" type="radio" name="program" value="program-no">Не знаю (Нужен ваш совет)
+              <input class="visually-hidden form__radio" type="radio" name="program" value="program-no">
+              <span class="form__radio-indicator"></span>
+              Не знаю (Нужен ваш совет)
             </label>
           </div>
         </div>
@@ -77,16 +83,40 @@
         <div class="form__group form__group--additional">
           <legend class="form__subtitle text text--subtitle">Дополнительно</legend>
           <label class="form__label text text--bigger">
-            <input class="form__checkbox" type="checkbox" name="sweetener" checked>Сахарозаменитель
+            <input class="visually-hidden form__checkbox" type="checkbox" name="sweetener" checked>
+            <span class="form__checkbox-indicator"></span>
+            <?xml version="1.0" encoding="utf-8"?>
+            <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
+              <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "></polygon>
+            </svg>
+            Сахарозаменитель
           </label>
           <label class="form__label text text--bigger">
-            <input class="form__checkbox" type="checkbox" name="water">Питьевая вода
+            <input class="visually-hidden form__checkbox" type="checkbox" name="water">
+            <span class="form__checkbox-indicator"></span>
+            <?xml version="1.0" encoding="utf-8"?>
+            <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
+              <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "></polygon>
+            </svg>
+            Питьевая вода
           </label>
           <label class="form__label text text--bigger">
-            <input class="form__checkbox" type="checkbox" name="milk">Молоко
+            <input class="visually-hidden form__checkbox" type="checkbox" name="milk">
+            <span class="form__checkbox-indicator"></span>
+            <?xml version="1.0" encoding="utf-8"?>
+            <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
+              <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "></polygon>
+            </svg>
+            Молоко
           </label>
           <label class="form__label text text--bigger">
-            <input class="form__checkbox" type="checkbox" name="vitamins">Витамины
+            <input class="visually-hidden form__checkbox" type="checkbox" name="vitamins">
+            <span class="form__checkbox-indicator"></span>
+            <?xml version="1.0" encoding="utf-8"?>
+            <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
+              <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "></polygon>
+            </svg>
+            Витамины
           </label>
         </div>
         <div class="form__bottom">
