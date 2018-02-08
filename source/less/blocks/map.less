@@ -1,10 +1,20 @@
 .map {
+  min-height: 476px;
+}
+
+.map__block {
+  width: 100vw;
   height: 364px;
   background-image: url("../img/map-background.jpg");
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
   .map {
+    min-height: 597px;
+  }
+
+  .map__block {
     height: 396px;
     background-image: url("../img/map-background-tablet.jpg");
   }
@@ -12,6 +22,10 @@
 
 @media (min-width: @desktop-width) {
   .map {
+    min-height: 400px;
+  }
+
+  .map__block {
     height: 400px;
     background-image: url("../img/map-background-desktop.jpg");
   }

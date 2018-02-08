@@ -106,16 +106,17 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="contacts page-footer__contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__text text text--bigger">Приглашаем к сотрудничеству дилеров!</p>
-        <div class="contacts__adress">
-          <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="contacts__city">Санкт-Петербург</p>
-        </div>
-      </div>
       <div class="map page-footer__map">
         <h2 class="visually-hidden">Карта с адресом</h2>
+        <div class="contacts page-footer__contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="contacts__text text text--bigger">Приглашаем к сотрудничеству дилеров!</p>
+          <div class="contacts__adress">
+            <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="contacts__city">Санкт-Петербург</p>
+          </div>
+        </div>
+        <div class="map__block" id="map"></div>
       </div>
       <div class="page-footer__bottom">
         <img class="company-name page-footer__company-name" src="#" width="10" height="10" alt="Cat Energy">
@@ -141,4 +142,6 @@
       </div>
     </footer>
   </body>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXwxLOk8f7UerRnBe31dTTDtfkiOK5HZg&callback=initMap"></script>
+  <script src="js/map.js"></script>
 </html>
