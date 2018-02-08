@@ -46,9 +46,12 @@
   .process__list {
     display: flex;
     flex-wrap: wrap;
+    counter-reset: counter;
   }
 
   .process__item {
+    position: relative;
+    z-index: 2;
     flex-shrink: 0;
     width: 320px;
     height: 228px;
@@ -72,6 +75,19 @@
     height: 80px;
   }
 
+  .process__item::after {
+    counter-increment: counter;
+    content: counter(counter);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 90px;
+    margin-top: 90px;
+    font-family: @set-font-family-additional;
+    font-size: 281px;
+    color: #f2f2f2;
+  }
+
   .process__text {
     width: 245px;
   }
@@ -91,5 +107,9 @@
     &--results {
       .set-margin(0, 0, 20px, 0);
     }
+  }
+
+  .process__item::after {
+    right: 10px;
   }
 }
