@@ -1,3 +1,8 @@
+.page-header {
+  min-width: @mobile-width;
+  .centerer();
+}
+
 .page-header__top {
   min-height: 66px;
   border-bottom: 1px solid #e6e6e6;
@@ -5,6 +10,7 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
+    min-width: @tablet-width;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,12 +29,9 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    width: @desktop-width;
     align-items: flex-end;
     min-height: 120px;
-    .set-padding(10px, 110px, 10px, 110px);
-
-    &--index {
-      background: linear-gradient(to left, @set-bg-green 50%, transparent 40%);
-    }
+    .set-padding(10px, 40px, 10px, 40px);
   }
 }

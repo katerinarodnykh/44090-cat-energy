@@ -1,4 +1,6 @@
 .programs {
+  width: @mobile-width;
+  .centerer();
   .set-padding(22px, 20px, 22px, 20px);
 }
 
@@ -20,6 +22,7 @@
   .set-padding(0, 0, 0 , 71px);
   .set-margin(10px, 0, 28px, 0);
   line-height: 38px;
+  text-transform: uppercase;
 }
 
 .programs__title::before {
@@ -49,6 +52,7 @@
 
 @media (min-width: @tablet-width) {
   .programs {
+    width: @tablet-width;
     .set-padding(0, 30px, 0, 30px);
   }
 
@@ -81,7 +85,8 @@
 
 @media (min-width: @desktop-width) {
   .programs {
-    .set-padding(0, 110px, 0, 110px);
+    width: @desktop-width;
+    .set-padding(0, 40px, 0, 40px);
   }
 
   .programs__list {

@@ -1,13 +1,15 @@
-.contacts {
+.page-footer--catalog .contacts,
+.page-footer--form .contacts {
+  background-color: @set-bg-grey;
+}
+
+.contacts__wrapper {
+  width: @mobile-width;
+  .centerer();
   display: flex;
   justify-content: space-between;
   min-height: 114px;
   .set-padding(30px, 20px, 15px, 20px);
-}
-
-.page-footer--catalog .contacts,
-.page-footer--form .contacts {
-  background-color: @set-bg-grey;
 }
 
 .contacts__text {
@@ -27,7 +29,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contacts {
+  .contacts__wrapper {
+    width: @tablet-width;
     .set-padding(65px, 70px, 58px, 70px);
   }
 
@@ -47,7 +50,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer .contacts {
+  .contacts__wrapper {
+    width: auto;
+  }
+
+  .page-footer .contacts__wrapper {
     .set-padding(65px, 75px, 58px, 75px);
     background-color: #ffffff;
   }
