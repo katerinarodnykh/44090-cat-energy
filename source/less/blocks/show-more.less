@@ -1,10 +1,7 @@
-.show-more {
-  width: 100%;
-  .set-padding(25px, 20px, 25px, 20px);
-}
-
 .show-more__wrapper {
+  width: @mobile-width;
   .centerer();
+  .set-padding(25px, 20px, 25px, 20px);
 }
 
 .show-more__title {
@@ -28,10 +25,24 @@
   background-color: @set-bg-grey;
 }
 
+.show-more__button:hover {
+  background-color: #ebebeb;
+}
+
+.show-more__button:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ebebeb;
+}
+
 @media (min-width: @tablet-width) {
   .show-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     width: calc(384px - 60px);
-    .set-padding(0, 0, 0, 0);
+    min-height: 571px;
+    .set-margin(0, 30px, 0, 30px);
     background: none;
   }
 
