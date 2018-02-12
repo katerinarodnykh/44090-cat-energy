@@ -102,7 +102,16 @@
               </div>
             </div>
             <div class="example__column example__column--cat">
-              <img class="example__image" src="#" width="10" height="10" alt="Фото кота">
+              <div class="example__image-wrapper">
+                <picture class="example__image-picture">
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="example__image example__image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"  alt="Фото кота">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="example__image example__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x"  alt="Фото кота">
+                </picture>
+              </div>
               <div class="before-after example__before-after">
                 <a class="before-after__text text text--bigger">Было</a>
                 <div class="before-after__switch">
