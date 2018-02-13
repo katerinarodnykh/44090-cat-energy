@@ -1,30 +1,50 @@
-.form {
-  width: @mobile-width;
-  .centerer();
-}
-
 .form__title {
+  width: @mobile-width;
   .set-padding(15px, 20px, 0, 20px);
-  .set-margin(0, 0, 25px, 0);
+  .set-margin(0, auto, 25px, auto);
 }
 
 .form__description {
+  width: @mobile-width;
+  .centerer();
   .set-padding(0, 40px, 10px, 20px);
 }
 
+.form__group-wrapper {
+  position: relative;
+}
+
+.form__group-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 3px;
+  background-color: @set-bg-green;
+  right: 0;
+  top: 40px;
+}
+
 .form__group {
+  width: @mobile-width;
+  .centerer();
   display: flex;
   flex-direction: column;
-  margin: 0;
   .set-padding(15px, 20px, 10px, 20px);
   line-height: 18px;
   border: 0;
 }
 
-.form__group--main,
-.form__group--program {
+.form__group-wrapper--main,
+.form__group-wrapper--program {
   border-bottom: 1px solid #e6e6e6;
 }
+
+.form__group-wrapper--main::after,
+.form__group-wrapper--program::after {
+  content: none;
+}
+
 
 .form__label {
   position: relative;
@@ -121,21 +141,20 @@
   margin-left: -6px;
 }
 
-.form__subtitle {
-  position: relative;
-  width: 100%;
-  .set-padding(12px, 0, 34px, 0);
-  flex-shrink: 0;
+.form__subtitle-wrapper {
+  width: @mobile-width;
+  .centerer();
 }
 
-.form__group--contacts .form__subtitle::after {
-  content: "";
-  position: absolute;
-  width: 99px;
-  height: 3px;
-  background-color: @set-bg-green;
-  right: -20px;
-  top: 26px;
+.form__subtitle {
+  width: auto;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  .set-padding(12px, 25px, 34px, 20px);
+  flex-shrink: 0;
+  background-color: @set-color-white;
 }
 
 .form__group--contacts .form__input {
@@ -148,16 +167,6 @@
 
 .form__group--comments .form__subtitle {
   .set-padding(5px, 0, 35px, 0);
-}
-
-.form__group--comments .form__subtitle::after {
-  content: "";
-  position: absolute;
-  width: 158px;
-  height: 3px;
-  background-color: @set-bg-green;
-  right: -20px;
-  top: 18px;
 }
 
 .form__textarea {
@@ -179,16 +188,6 @@
 
 .form__group--additional .form__subtitle {
   .set-padding(18px, 0, 34px, 0);
-}
-
-.form__group--additional .form__subtitle::after {
-  content: "";
-  position: absolute;
-  width: 136px;
-  height: 3px;
-  background-color: @set-bg-green;
-  right: -20px;
-  top: 31px;
 }
 
 .form__group--additional .form__label {
