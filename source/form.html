@@ -39,43 +39,47 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="get">
         <h2 class="form__title text text--title">Подбор программы</h2>
         <p class="form__description text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <div class="form__group-wrapper form__group-wrapper--main">
-          <div class="form__group form__group--main">
-            <legend class="visually-hidden">Основная информация</legend>
-            <label class="form__label text text--bigger">Имя:<sup>*</sup>
-              <input class="form__input form__input--name text text--bigger" type="text" name="name" placeholder="Барсик" required>
-            </label>
-            <label class="form__label text text--bigger">Вес(кг):<sup>*</sup>
-              <input class="form__input form__input--weight text text--bigger" type="number" name="weight" placeholder="7" required>
-            </label>
-            <label class="form__label text text--bigger">Возраст(лет):
-              <input class="form__input form__input--age text text--bigger" type="number" name="age" placeholder="7">
-            </label>
+        <div class="form__wrapper">
+          <div class="form__container form__container--main">
+            <h3 class="visually-hidden">Основная информация</h3>
+            <div class="form__group form__group--main">
+              <label class="form__label text text--bigger">Имя:<sup>*</sup>
+                <input class="form__input form__input--name text text--bigger" type="text" name="name" placeholder="Барсик" required>
+              </label>
+              <label class="form__label text text--bigger">Вес (кг):<sup>*</sup>
+                <input class="form__input form__input--weight text text--bigger" type="number" name="weight" placeholder="7" required>
+              </label>
+              <label class="form__label text text--bigger">Возраст (лет):
+                <input class="form__input form__input--age text text--bigger" type="number" name="age" placeholder="7">
+              </label>
+            </div>
+          </div>
+          <div class="form__container form__container--program">
+            <h3 class="visually-hidden">Выбор программы</h3>
+            <div class="form__group-wrapper form__group-wrapper--program">
+              <div class="form__group form__group--program">
+                <label class="form__label text text--bigger">
+                  <input class="visually-hidden form__radio" type="radio" name="program" value="program-slim" checked>
+                  <span class="form__radio-indicator"></span>
+                  Похудение
+                </label>
+                <label class="form__label text text--bigger">
+                  <input class="visually-hidden form__radio" type="radio" name="program" value="program-pro">
+                  <span class="form__radio-indicator"></span>
+                  Набор массы
+                </label>
+                <label class="form__label text text--bigger">
+                  <input class="visually-hidden form__radio" type="radio" name="program" value="program-no">
+                  <span class="form__radio-indicator"></span>
+                  Не знаю (Нужен ваш совет)
+                </label>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="form__group-wrapper form__group-wrapper--program">
-          <div class="form__group form__group--program">
-            <legend class="visually-hidden">Выбор программы</legend>
-            <label class="form__label text text--bigger">
-              <input class="visually-hidden form__radio" type="radio" name="program" value="program-slim" checked>
-              <span class="form__radio-indicator"></span>
-              Похудение
-            </label>
-            <label class="form__label text text--bigger">
-              <input class="visually-hidden form__radio" type="radio" name="program" value="program-pro">
-              <span class="form__radio-indicator"></span>
-              Набор массы
-            </label>
-            <label class="form__label text text--bigger">
-              <input class="visually-hidden form__radio" type="radio" name="program" value="program-no">
-              <span class="form__radio-indicator"></span>
-              Не знаю (Нужен ваш совет)
-            </label>
-          </div>
-        </div>
-        <div class="form__group-wrapper form__group-wrapper--contacts">
+        <div class="form__container form__container--contacts">
           <div class="form__subtitle-wrapper">
-            <h2 class="form__subtitle text text--subtitle">Контактные данные (владельца кота)</h2>
+            <h3 class="form__subtitle text text--subtitle">Контактные данные (владельца кота)</h3>
           </div>
           <div class="form__group form__group--contacts">
             <label class="form__label text text--bigger">E-mail:<sup>*</sup>
@@ -86,15 +90,19 @@
             </label>
           </div>
         </div>
-        <div class="form__group-wrapper form__group-wrapper--comments">
+        <div class="form__container form__container--comments">
+          <div class="form__subtitle-wrapper">
+            <h3 class="form__subtitle text text--subtitle">Комментарий</h3>
+          </div>
           <div class="form__group form__group--comments">
-            <div class="form__subtitle text text--subtitle">Комментарий</div>
             <textarea class="form__textarea text text--bigger">Расскажите обо всех повадках кота</textarea>
           </div>
         </div>
-        <div class="form__group-wrapper form__group-wrapper--additional">
+        <div class="form__container form__container--additional">
+          <div class="form__subtitle-wrapper">
+            <h3 class="form__subtitle text text--subtitle">Дополнительно</h3>
+          </div>
           <div class="form__group form__group--additional">
-            <legend class="form__subtitle text text--subtitle">Дополнительно</legend>
             <label class="form__label text text--bigger">
               <input class="visually-hidden form__checkbox" type="checkbox" name="sweetener" checked>
               <span class="form__checkbox-indicator"></span>
