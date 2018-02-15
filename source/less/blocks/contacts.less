@@ -29,6 +29,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-footer--index .contacts {
+    background-color: @set-color-white;
+  }
+
   .contacts__wrapper {
     width: @tablet-width;
     .set-padding(65px, 70px, 58px, 70px);
@@ -50,8 +54,10 @@
 }
 
 @media (min-width: @desktop-width) {
-  .contacts__wrapper {
-    width: auto;
+  .page-footer--index .contacts,
+  .page-footer--catalog .contacts,
+  .page-footer--form .contacts {
+    background-color: transparent;
   }
 
   .page-footer .contacts__wrapper {
