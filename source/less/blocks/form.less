@@ -99,6 +99,10 @@
   border: 2px solid #444444;
 }
 
+.form__input:invalid {
+  border: 2px solid #ff8282;
+}
+
 .form__input--weight::-webkit-inner-spin-button,
 .form__input--weight::-webkit-outer-spin-button,
 .form__input--age::-webkit-inner-spin-button,
@@ -136,7 +140,7 @@
   border: 1px solid #aeaeae;
 }
 
-.form__group--program .form__label:active {
+.form__label--disabled {
   opacity: 0.3;
 }
 
@@ -171,6 +175,10 @@
 
 .form__group--contacts .form__input {
   .set-margin(0, 0, 0, 12px);
+}
+
+.form__container--contacts .form__subtitle {
+  width: 227px;
 }
 
 .form__group--comments {
@@ -236,10 +244,6 @@
 
 .form__label:hover .form__checkbox-indicator {
   border: 1px solid #aeaeae;
-}
-
-.form__group--additional .form__label:active {
-  opacity: 0.3;
 }
 
 .form__bottom {
