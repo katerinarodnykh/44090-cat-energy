@@ -5,6 +5,10 @@
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="picturefill.min.js" async></script>
   </head>
   <body>
     <div class="index-wrapper">
@@ -37,7 +41,13 @@
           <div class="promo__wrapper">
             <h1 class="promo__title text text--title">Функциональное питание для котов</h1>
             <p class="promo__slogan text">Занялся собой? Займись котом!</p>
-            <img class="promo__image" src="#" width="10" height="10" alt="Товар Cat Energy">
+            <div class="promo__picture">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+                <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Товар Cat Energy">
+              </picture>
+            </div>
             <a class="promo__button button text" href="form.html">Подобрать программу</a>
           </div>
         </section>
@@ -96,9 +106,20 @@
               </div>
             </div>
             <div class="example__column example__column--cat">
-              <img class="example__image" src="#" width="10" height="10" alt="Фото кота">
+              <div class="example__image-wrapper">
+                <picture class="example__image-picture">
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="example__image example__image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"  alt="Фото кота">
+                </picture>
+                <picture class="example__image-picture">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="example__image example__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x"  alt="Фото кота">
+                </picture>
+              </div>
               <div class="before-after example__before-after">
-                <a class="before-after__text text text--bigger">Было</a>
+                <a class="before-after__text before-after__text--before text text--bigger">Было</a>
                 <div class="before-after__switch">
                   <a class="before-after__switch-wrapper">
                     <div class="before-after__switch-on"></div>
@@ -110,7 +131,7 @@
           </div>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer page-footer--index">
         <div class="map page-footer__map">
           <h2 class="visually-hidden">Карта с адресом</h2>
           <div class="contacts page-footer__contacts">

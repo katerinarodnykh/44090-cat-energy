@@ -5,6 +5,10 @@
     <title>Подбор программы от Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -36,92 +40,110 @@
         <h2 class="form__title text text--title">Подбор программы</h2>
         <p class="form__description text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <div class="form__wrapper">
-          <div class="form__group form__group--main">
-            <legend class="visually-hidden">Основная информация</legend>
-            <label class="form__label text text--bigger">Имя:<sup>*</sup>
-              <input class="form__input form__input--name text text--bigger" type="text" name="name" placeholder="Барсик" required>
+          <div class="form__container form__container--main">
+            <h3 class="visually-hidden">Основная информация</h3>
+            <div class="form__group form__group--main">
+              <label class="form__label text text--bigger">Имя:*
+                <input class="form__input form__input--name text text--bigger" type="text" name="name" placeholder="Барсик" required>
+              </label>
+              <label class="form__label text text--bigger">Вес (кг):*
+                <input class="form__input form__input--weight text text--bigger" type="number" name="weight" placeholder="7" required>
+              </label>
+              <label class="form__label text text--bigger">Возраст (лет):
+                <input class="form__input form__input--age text text--bigger" type="number" name="age" placeholder="7">
+              </label>
+            </div>
+          </div>
+          <div class="form__container form__container--program">
+            <h3 class="visually-hidden">Выбор программы</h3>
+            <div class="form__group-wrapper form__group-wrapper--program">
+              <div class="form__group form__group--program">
+                <label class="form__label text text--bigger">
+                  <input class="visually-hidden form__radio" type="radio" name="program" value="program-slim" checked>
+                  <span class="form__radio-indicator"></span>
+                  Похудение
+                </label>
+                <label class="form__label text text--bigger">
+                  <input class="visually-hidden form__radio" type="radio" name="program" value="program-pro">
+                  <span class="form__radio-indicator"></span>
+                  Набор массы
+                </label>
+                <label class="form__label text text--bigger">
+                  <input class="visually-hidden form__radio" type="radio" name="program" value="program-no">
+                  <span class="form__radio-indicator"></span>
+                  Не знаю (Нужен ваш совет)
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__container form__container--contacts">
+          <div class="form__subtitle-wrapper">
+            <h3 class="form__subtitle text text--subtitle">Контактные данные (владельца кота)</h3>
+          </div>
+          <div class="form__group form__group--contacts">
+            <label class="form__label text text--bigger">E-mail:*
+              <input class="form__input form__input--email text text--bigger" type="email" name="email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="form__label text text--bigger">Вес(кг):<sup>*</sup>
-              <input class="form__input form__input--weight text text--bigger" type="number" name="weight" placeholder="7" required>
-            </label>
-            <label class="form__label text text--bigger">Возраст(лет):
-              <input class="form__input form__input--age text text--bigger" type="number" name="age" placeholder="7">
+            <label class="form__label text text--bigger">Телефон:*
+              <input class="form__input form__input--phone text text--bigger" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </div>
-          <div class="form__group form__group--program">
-            <legend class="visually-hidden">Выбор программы</legend>
-            <label class="form__label text text--bigger">
-              <input class="visually-hidden form__radio" type="radio" name="program" value="program-slim" checked>
-              <span class="form__radio-indicator"></span>
-              Похудение
-            </label>
-            <label class="form__label text text--bigger">
-              <input class="visually-hidden form__radio" type="radio" name="program" value="program-pro">
-              <span class="form__radio-indicator"></span>
-              Набор массы
-            </label>
-            <label class="form__label text text--bigger">
-              <input class="visually-hidden form__radio" type="radio" name="program" value="program-no">
-              <span class="form__radio-indicator"></span>
-              Не знаю (Нужен ваш совет)
-            </label>
+        </div>
+        <div class="form__container form__container--comments">
+          <div class="form__subtitle-wrapper">
+            <h3 class="form__subtitle text text--subtitle">Комментарий</h3>
+          </div>
+          <div class="form__group form__group--comments">
+            <textarea class="form__textarea text text--bigger">Расскажите обо всех повадках кота</textarea>
           </div>
         </div>
-        <div class="form__group form__group--contacts">
-          <legend class="form__subtitle text text--subtitle">Контактные данные (владельца кота)</legend>
-          <label class="form__label text text--bigger">E-mail:<sup>*</sup>
-            <input class="form__input form__input--email text text--bigger" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-          </label>
-          <label class="form__label text text--bigger">Телефон:<sup>*</sup>
-            <input class="form__input form__input--phone text text--bigger" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-          </label>
-        </div>
-        <div class="form__group form__group--comments">
-          <legend class="form__subtitle text text--subtitle">Комментарий</legend>
-          <textarea class="form__textarea text text--bigger">Расскажите обо всех повадках кота</textarea>
-        </div>
-        <div class="form__group form__group--additional">
-          <legend class="form__subtitle text text--subtitle">Дополнительно</legend>
-          <label class="form__label text text--bigger">
-            <input class="visually-hidden form__checkbox" type="checkbox" name="sweetener" checked>
-            <span class="form__checkbox-indicator"></span>
-            <?xml version="1.0" encoding="utf-8"?>
-            <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
+        <div class="form__container form__container--additional">
+          <div class="form__subtitle-wrapper">
+            <h3 class="form__subtitle text text--subtitle">Дополнительно</h3>
+          </div>
+          <div class="form__group form__group--additional">
+            <label class="form__label text text--bigger">
+              <input class="visually-hidden form__checkbox" type="checkbox" name="sweetener" checked>
+              <span class="form__checkbox-indicator"></span>
+              <?xml version="1.0" encoding="utf-8"?>
+              <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
               <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "></polygon>
             </svg>
-            Сахарозаменитель
-          </label>
-          <label class="form__label text text--bigger">
-            <input class="visually-hidden form__checkbox" type="checkbox" name="water">
-            <span class="form__checkbox-indicator"></span>
-            <?xml version="1.0" encoding="utf-8"?>
-            <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
+              Сахарозаменитель
+            </label>
+            <label class="form__label text text--bigger">
+              <input class="visually-hidden form__checkbox" type="checkbox" name="water">
+              <span class="form__checkbox-indicator"></span>
+              <?xml version="1.0" encoding="utf-8"?>
+              <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
               <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "></polygon>
             </svg>
-            Питьевая вода
-          </label>
-          <label class="form__label text text--bigger">
-            <input class="visually-hidden form__checkbox" type="checkbox" name="milk">
-            <span class="form__checkbox-indicator"></span>
-            <?xml version="1.0" encoding="utf-8"?>
-            <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
+              Питьевая вода
+            </label>
+            <label class="form__label text text--bigger">
+              <input class="visually-hidden form__checkbox" type="checkbox" name="milk">
+              <span class="form__checkbox-indicator"></span>
+              <?xml version="1.0" encoding="utf-8"?>
+              <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
               <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "></polygon>
             </svg>
-            Молоко
-          </label>
-          <label class="form__label text text--bigger">
-            <input class="visually-hidden form__checkbox" type="checkbox" name="vitamins">
-            <span class="form__checkbox-indicator"></span>
-            <?xml version="1.0" encoding="utf-8"?>
-            <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
+              Молоко
+            </label>
+            <label class="form__label text text--bigger">
+              <input class="visually-hidden form__checkbox" type="checkbox" name="vitamins">
+              <span class="form__checkbox-indicator"></span>
+              <?xml version="1.0" encoding="utf-8"?>
+              <svg class="form__checkbox-indicator-icon" width="23" height="23" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
               <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "></polygon>
             </svg>
-            Витамины
-          </label>
+              Витамины
+            </label>
+          </div>
         </div>
         <div class="form__bottom">
           <button class="form__button button text text--bigger" type="submit" value="Отправить заявку">Отправить заявку</button>
-          <div class="form__required"><sup>*</sup> — Oбязательные поля</div>
+          <div class="form__required">* — Oбязательные поля</div>
         </div>
       </form>
     </main>
