@@ -7,8 +7,9 @@
   .centerer();
   display: flex;
   flex-direction: column;
-  min-height: 705px; /*временно, потом убрать*/
+  min-height: 705px;
   .set-padding(18px, 0, 22px, 0);
+  background: @set-bg-grey;
 }
 
 .example__column {
@@ -109,6 +110,7 @@
     width: @tablet-width;
     min-height: 1080px;
     .set-padding(43px, 0, 0, 0);
+    background: none;
   }
 
   .example__title {
