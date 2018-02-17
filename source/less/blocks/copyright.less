@@ -1,8 +1,8 @@
 .copyright {
-  height: 56px;
+  height: 72px;
+  .set-margin(31px, 0, 0, 0);
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 .copyright__link {
@@ -13,4 +13,16 @@
 
 .copyright__logo {
   display: block;
+  .set-margin(-10px, -5px, 0, 0);
+  width: 40px;
+  height: 40px;
+}
+
+.copyright__logo:hover .copyright__icon {
+  fill: @set-bg-green;
+}
+
+.copyright__logo:active .copyright__icon {
+  opacity: 0.3;
+  fill: @set-bg-green;
 }
