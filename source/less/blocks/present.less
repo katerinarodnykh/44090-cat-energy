@@ -4,6 +4,7 @@
 }
 
 .present-wrapper {
+  position: relative;
   .centerer();
   display: flex;
   width: 280px;
@@ -16,6 +17,13 @@
     background-image: url("../img/gift-photo-mobile@2x.jpg");
     background-size: cover;
   }
+}
+
+.present__icon {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  margin-left: -28px;
 }
 
 .present__text {
@@ -47,6 +55,11 @@
     }
   }
 
+  .present__icon {
+    left: 90px;
+    margin-left: 0;
+  }
+
   .present__text {
     text-align: left;
     .set-margin(0, 115px, 0, 0);
@@ -69,6 +82,11 @@
       background-image: url("../img/gift-photo-desktop@2x.jpg");
       background-size: cover;
     }
+  }
+
+  .present__icon {
+    left: 50%;
+    margin-left: -28px;
   }
 
   .present__text {

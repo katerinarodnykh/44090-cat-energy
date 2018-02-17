@@ -13,23 +13,16 @@
   .index-wrapper::after {
     content: "";
     position: absolute;
-    width: 680px;
+    width: 610px;
     height: 696px;
     top: 0;
     right: 0;
-    margin-right: -70px;
     background-image: url("../img/index-background-desktop@1x.jpg");
 
     @media (min-resolution: 144dpi),
       (min-resolution: 1.5dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
-      background-size: 680px 696px;
+      background-size: 610px 696px;
     }
-  }
-}
-
-@media (min-width: 1450px) {
-  .index-wrapper::after {
-    margin-right: 0;
   }
 }
