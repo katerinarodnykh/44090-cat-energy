@@ -99,7 +99,7 @@
   border: 2px solid #444444;
 }
 
-.form__input:invalid {
+.form__input--error {
   border: 2px solid #ff8282;
 }
 
@@ -113,6 +113,10 @@
 
 .form__group--main .form__input {
   .set-margin(0, 0, 0, 15px);
+}
+
+.form__group--main .form__input--weight {
+  .set-margin(0, 0, 0, 16px);
 }
 
 .form__group--program {
@@ -174,11 +178,41 @@
 }
 
 .form__group--contacts .form__input {
+  position: relative;
   .set-margin(0, 0, 0, 12px);
+  .set-padding(0, 16px, 0, 14px);
+}
+
+.form__group--contacts .form__input--phone {
+  .set-margin(0, 0, 0, 10px);
 }
 
 .form__container--contacts .form__subtitle {
   width: 227px;
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.form__icon--mail {
+  margin-top: -7px;
+  right: 16px;
+}
+
+.form__icon--phone {
+  margin-top: -10px;
+  right: 13px;
+}
+
+.form__icon--active {
+  fill: @set-bg-green;
+}
+
+.form__icon--error {
+  fill: #ff8282;
 }
 
 .form__group--comments {
@@ -307,7 +341,13 @@
   }
 
   .form__group--main .form__input {
-    .set-margin(0, 0, 0, 20px);
+    .set-margin(0, 0, 0, 18px);
+    .set-padding(0, 16px, 0, 16px);
+  }
+
+  .form__group--main .form__input--weight {
+    .set-margin(0, 0, 0, 19px);
+    .set-padding(0, 16px, 0, 18px);
   }
 
   .form__group--main {
@@ -362,12 +402,30 @@
     .set-margin(0, auto, 13px, auto);
   }
 
+  .form__container--contacts .form__subtitle {
+    width: auto;
+  }
+
   .form__group--contacts .form__label {
     .set-margin(0, 0, 20px, 0);
   }
 
   .form__group--contacts .form__input {
     .set-margin(0, 0, 0, 18px);
+    .set-padding(0, 20px, 0, 20px);
+  }
+
+  .form__group--contacts .form__input--phone {
+    .set-margin(0, 0, 0, 14px);
+    .set-padding(0, 17px, 0, 17px);
+  }
+
+  .form__icon--mail {
+    right: 20px;
+  }
+
+  .form__icon--phone {
+    right: 17px;
   }
 
   .form__group--comments {
@@ -413,7 +471,7 @@
   }
 
   .form__checkbox:checked ~ .form__checkbox-indicator-icon {
-    margin-top: -22px;
+    margin-top: -20px;
     left: 9px;
   }
 
@@ -483,7 +541,7 @@
   }
 
   .form__group--main {
-    width: 568px;
+    width: 570px;
     .set-padding(0, 0, 0, 0);
     .set-margin(0, 40px, 0, 40px);
   }
@@ -500,6 +558,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     .set-margin(0, auto, 15px, auto);
+    .set-padding(15px, 41px, 10px, 41px);
+  }
+
+  .form__group--contacts .form__input {
+    .set-margin(0, 0, 0, 21px);
   }
 
   .form__group--contacts .form__label {

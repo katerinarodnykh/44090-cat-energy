@@ -26,3 +26,26 @@
   opacity: 0.3;
   fill: @set-bg-green;
 }
+
+.page-footer__copyright:active {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    display: flex;
+    align-items: center;
+    .set-margin(20px, 0, 0, 0);
+    height: auto;
+  }
+
+  .copyright__logo {
+    .set-margin(0, -5px, 0, 13px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    .set-margin(0, 0, 0, 0);
+  }
+}

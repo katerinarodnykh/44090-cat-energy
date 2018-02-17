@@ -10,9 +10,11 @@
 }
 
 .page-footer__company-name {
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 72px;
+  .set-padding(17px, 0, 0, 0);
   border-bottom: 1px solid #d9d9d9;
 }
 
@@ -29,6 +31,7 @@
   .page-footer__company-name {
     width: auto;
     height: 100%;
+    .set-padding(0, 0, 0, 0);
     border-bottom: none;
   }
 }
@@ -54,6 +57,7 @@
 
   .page-footer__bottom-wrapper {
     width: @desktop-width;
+    .set-padding(0px, 40px, 0, 40px);
     .centerer();
   }
 }
