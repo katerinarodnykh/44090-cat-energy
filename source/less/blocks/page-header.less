@@ -10,11 +10,14 @@
 .page-header__top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: @mobile-width;
   .centerer();
-  .set-padding(0, 20px, 0, 20px);
+  .set-padding(12px, 20px, 0, 20px);
   min-height: 66px;
+}
+
+.page-header__company-name {
+  .set-padding(12px, 0, 0, 0);
 }
 
 .page-header__logo:active,
@@ -31,6 +34,9 @@
 
 .page-header__toggle {
   position: relative;
+  height: 100%;
+  width: 30px;
+  .set-padding(12px, 0, 0, 0);
   border: none;
   background-color: #ffffff;
   cursor: pointer;
@@ -42,10 +48,18 @@
   position: absolute;
   width: 25px;
   height: 2px;
-  top: 0;
-  right: 5px;
+  top: 13px;
+  right: 0;
   background-color: #000000;
   box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.page-header__toggle--close::after {
+  display: inline;
+}
+
+.page-header__toggle--close .page-header__close {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
