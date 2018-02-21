@@ -161,6 +161,10 @@
   margin-left: -6px;
 }
 
+.form__radio:focus + .form__radio-indicator {
+  outline: 1px solid #5ba9d9;
+}
+
 .form__subtitle-wrapper {
   width: @mobile-width;
   .centerer();
@@ -246,6 +250,10 @@
 
 .form__group--additional .form__label {
   .set-margin(0, 0, 13px, 0);
+}
+
+.form__checkbox:focus + .form__checkbox-indicator {
+  outline: 1px solid #5ba9d9;
 }
 
 .form__group--additional .form__checkbox {
