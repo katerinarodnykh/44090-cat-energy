@@ -1,16 +1,3 @@
-.fontface(@family, @filename: @family, @weight: normal, @style: normal) {
-  @font-face {
-    font-family: @family;
-    src: url("../fonts/@{filename}.woff2") format("woff2"),
-      url("../fonts/@{filename}.woff") format("woff");
-    font-weight: @weight;
-    font-style: @style;
-  }
-}
-
-.fontface (Oswald Regular);
-.fontface (Oswald Medium);
-
 .text {
   font-family: @set-font-family-additional;
   .set-font-size (14px);
