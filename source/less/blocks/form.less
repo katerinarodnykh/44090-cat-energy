@@ -70,6 +70,8 @@
   height: 45px;
   .set-padding(0, 15px, 0, 15px);
   border: 1px solid #e6e6e6;
+  outline: 2px solid auto;
+  outline-offset: -2px;
 }
 
 .form__input::-webkit-input-placeholder {
@@ -92,15 +94,18 @@
 }
 
 .form__input:hover {
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
+  outline-offset: -2px;
 }
 
 .form__input:active {
-  border: 2px solid #444444;
+  outline: 2px solid #444444;
+  outline-offset: -2px;
 }
 
-.form__input--error {
-  border: 2px solid #ff8282;
+.form__input:invalid {
+  outline: 2px solid #ff8282;
+  outline-offset: -2px;
 }
 
 .form__input--weight::-webkit-inner-spin-button,
@@ -163,6 +168,7 @@
 
 .form__radio:focus + .form__radio-indicator {
   outline: 1px solid #5ba9d9;
+  outline-offset: -2px;
 }
 
 .form__subtitle-wrapper {
@@ -211,11 +217,11 @@
   right: 13px;
 }
 
-.form__icon--active {
+.form__input:active + .form__icon {
   fill: @set-bg-green;
 }
 
-.form__icon--error {
+.form__input:invalid + .form__icon {
   fill: #ff8282;
 }
 
@@ -254,6 +260,7 @@
 
 .form__checkbox:focus + .form__checkbox-indicator {
   outline: 1px solid #5ba9d9;
+  outline-offset: -2px;
 }
 
 .form__group--additional .form__checkbox {
