@@ -35,15 +35,19 @@
 
 @media (min-width: @tablet-width) {
   .main-navigation__list {
-    width: 440px;
+    width: 441px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .main-navigation__item:not(:nth-child(3n)) {
+    margin-right: 35px;
+    margin-bottom: 10px;
   }
 
   .main-navigation__link {
     position: relative;
-    .set-padding(0, 0, 0, 0);
+    .set-padding(10px, 0, 0, 0);
     font-family: @set-font-family-additional;
     font-weight: normal;
     .set-font-size (18px);
@@ -68,11 +72,12 @@
   }
 
   .main-navigation__list {
-    width: 480px;
-    .set-padding(0, 0, 10px, 0);
+    width: 482px;
+    .set-padding(0, 0, 0, 0);
   }
 
   .main-navigation__link {
+    .set-padding(0, 0, 0, 0);
     .set-font-size (20px);
   }
 

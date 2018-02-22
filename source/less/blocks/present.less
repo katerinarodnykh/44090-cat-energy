@@ -8,7 +8,7 @@
   .centerer();
   display: flex;
   width: 280px;
-  height: 289px;
+  min-height: 289px;
   background-color: @set-bg-green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@
     align-items: center;
     justify-content: flex-end;
     width: 708px;
-    height: 200px;
+    min-height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: 144dpi),
@@ -63,7 +63,7 @@
 
   .present__text {
     text-align: left;
-    .set-margin(0, 115px, 0, 0);
+    .set-margin(20px, 115px, 20px, 0);
   }
 }
 
@@ -75,7 +75,7 @@
   .present-wrapper {
     margin: 0;
     width: 244px;
-    height: 289px;
+    min-height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: 144dpi),
